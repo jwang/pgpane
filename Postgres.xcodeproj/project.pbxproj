@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52D78CC3133DC8460044F52C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D78CC2133DC8460044F52C /* Cocoa.framework */; };
+		52D78CC5133DC8460044F52C /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D78CC4133DC8460044F52C /* PreferencePanes.framework */; };
+		52D78CCF133DC8460044F52C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52D78CCD133DC8460044F52C /* InfoPlist.strings */; };
+		52D78CD2133DC8460044F52C /* Postgres.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D78CD1133DC8460044F52C /* Postgres.h */; };
+		52D78CD4133DC8460044F52C /* Postgres.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D78CD3133DC8460044F52C /* Postgres.m */; };
+		52D78CD6133DC8460044F52C /* Postgres.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 52D78CD5133DC8460044F52C /* Postgres.tiff */; };
+		52D78CD9133DC8460044F52C /* Postgres.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D78CD7133DC8460044F52C /* Postgres.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		52D78CBF133DC8460044F52C /* Postgres.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Postgres.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D78CC2133DC8460044F52C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		52D78CC4133DC8460044F52C /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		52D78CC7133DC8460044F52C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		52D78CC8133DC8460044F52C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		52D78CC9133DC8460044F52C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		52D78CCC133DC8460044F52C /* Postgres-Info.plist */ = {isa = PBXFileReference; path = "Postgres-Info.plist"; sourceTree = "<group>"; };
+		52D78CCE133DC8460044F52C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		52D78CD0133DC8460044F52C /* Postgres-Prefix.pch */ = {isa = PBXFileReference; path = "Postgres-Prefix.pch"; sourceTree = "<group>"; };
+		52D78CD1133DC8460044F52C /* Postgres.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Postgres.h; sourceTree = "<group>"; };
+		52D78CD3133DC8460044F52C /* Postgres.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Postgres.m; sourceTree = "<group>"; };
+		52D78CD5133DC8460044F52C /* Postgres.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Postgres.tiff; sourceTree = "<group>"; };
+		52D78CD8133DC8460044F52C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Postgres.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52D78CBA133DC8460044F52C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D78CC3133DC8460044F52C /* Cocoa.framework in Frameworks */,
+				52D78CC5133DC8460044F52C /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52D78CB2133DC8460044F52C = {
+			isa = PBXGroup;
+			children = (
+				52D78CCA133DC8460044F52C /* Postgres */,
+				52D78CC1133DC8460044F52C /* Frameworks */,
+				52D78CC0133DC8460044F52C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52D78CC0133DC8460044F52C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52D78CBF133DC8460044F52C /* Postgres.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52D78CC1133DC8460044F52C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52D78CC2133DC8460044F52C /* Cocoa.framework */,
+				52D78CC4133DC8460044F52C /* PreferencePanes.framework */,
+				52D78CC6133DC8460044F52C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52D78CC6133DC8460044F52C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52D78CC7133DC8460044F52C /* AppKit.framework */,
+				52D78CC8133DC8460044F52C /* CoreData.framework */,
+				52D78CC9133DC8460044F52C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		52D78CCA133DC8460044F52C /* Postgres */ = {
+			isa = PBXGroup;
+			children = (
+				52D78CD1133DC8460044F52C /* Postgres.h */,
+				52D78CD3133DC8460044F52C /* Postgres.m */,
+				52D78CD5133DC8460044F52C /* Postgres.tiff */,
+				52D78CD7133DC8460044F52C /* Postgres.xib */,
+				52D78CCB133DC8460044F52C /* Supporting Files */,
+			);
+			path = Postgres;
+			sourceTree = "<group>";
+		};
+		52D78CCB133DC8460044F52C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52D78CCC133DC8460044F52C /* Postgres-Info.plist */,
+				52D78CCD133DC8460044F52C /* InfoPlist.strings */,
+				52D78CD0133DC8460044F52C /* Postgres-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		52D78CBB133DC8460044F52C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D78CD2133DC8460044F52C /* Postgres.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		52D78CBE133DC8460044F52C /* Postgres */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52D78CDC133DC8460044F52C /* Build configuration list for PBXNativeTarget "Postgres" */;
+			buildPhases = (
+				52D78CB9133DC8460044F52C /* Sources */,
+				52D78CBA133DC8460044F52C /* Frameworks */,
+				52D78CBB133DC8460044F52C /* Headers */,
+				52D78CBC133DC8460044F52C /* Resources */,
+				52D78CBD133DC8460044F52C /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Postgres;
+			productName = Postgres;
+			productReference = 52D78CBF133DC8460044F52C /* Postgres.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52D78CB4133DC8460044F52C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Fresh Blocks LLC";
+			};
+			buildConfigurationList = 52D78CB7133DC8460044F52C /* Build configuration list for PBXProject "Postgres" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 52D78CB2133DC8460044F52C;
+			productRefGroup = 52D78CC0133DC8460044F52C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52D78CBE133DC8460044F52C /* Postgres */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52D78CBC133DC8460044F52C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D78CCF133DC8460044F52C /* InfoPlist.strings in Resources */,
+				52D78CD6133DC8460044F52C /* Postgres.tiff in Resources */,
+				52D78CD9133DC8460044F52C /* Postgres.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		52D78CBD133DC8460044F52C /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52D78CB9133DC8460044F52C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D78CD4133DC8460044F52C /* Postgres.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52D78CCD133DC8460044F52C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52D78CCE133DC8460044F52C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		52D78CD7133DC8460044F52C /* Postgres.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52D78CD8133DC8460044F52C /* en */,
+			);
+			name = Postgres.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52D78CDA133DC8460044F52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		52D78CDB133DC8460044F52C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52D78CDD133DC8460044F52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Postgres/Postgres-Prefix.pch";
+				INFOPLIST_FILE = "Postgres/Postgres-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		52D78CDE133DC8460044F52C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Postgres/Postgres-Prefix.pch";
+				INFOPLIST_FILE = "Postgres/Postgres-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52D78CB7133DC8460044F52C /* Build configuration list for PBXProject "Postgres" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52D78CDA133DC8460044F52C /* Debug */,
+				52D78CDB133DC8460044F52C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52D78CDC133DC8460044F52C /* Build configuration list for PBXNativeTarget "Postgres" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52D78CDD133DC8460044F52C /* Debug */,
+				52D78CDE133DC8460044F52C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52D78CB4133DC8460044F52C /* Project object */;
+}
