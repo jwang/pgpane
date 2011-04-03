@@ -9,7 +9,7 @@ Enabling and Disabling the auto-start option when your computer boots up.
 
 ## Screenshot
 
-![PrefPane screenshot](https://github.com/jwang/pgpane/blob/master/Postgres.png)
+![PrefPane screenshot](https://github.com/jwang/pgpane/raw/master/Postgres.png)
 
 ## Requirements
 
