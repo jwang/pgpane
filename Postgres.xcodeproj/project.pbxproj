@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5224089713480B34005E3503 /* started.png in Resources */ = {isa = PBXBuildFile; fileRef = 5224089513480B34005E3503 /* started.png */; };
+		5224089813480B34005E3503 /* stopped.png in Resources */ = {isa = PBXBuildFile; fileRef = 5224089613480B34005E3503 /* stopped.png */; };
+		522408A11348179B005E3503 /* postgres.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 522408A01348179B005E3503 /* postgres.tiff */; };
+		522408AA13482CD4005E3503 /* elephant.png in Resources */ = {isa = PBXBuildFile; fileRef = 522408A913482CD4005E3503 /* elephant.png */; };
+		529E2A2A133DDED80040D93C /* postgresql.png in Resources */ = {isa = PBXBuildFile; fileRef = 529E2A29133DDED80040D93C /* postgresql.png */; };
+		52C9C612133DEF2F008DB7F5 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C9C60C133DEF2F008DB7F5 /* logo.png */; };
 		52D78CC3133DC8460044F52C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D78CC2133DC8460044F52C /* Cocoa.framework */; };
 		52D78CC5133DC8460044F52C /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D78CC4133DC8460044F52C /* PreferencePanes.framework */; };
 		52D78CCF133DC8460044F52C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52D78CCD133DC8460044F52C /* InfoPlist.strings */; };
@@ -14,22 +20,30 @@
 		52D78CD4133DC8460044F52C /* Postgres.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D78CD3133DC8460044F52C /* Postgres.m */; };
 		52D78CD6133DC8460044F52C /* Postgres.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 52D78CD5133DC8460044F52C /* Postgres.tiff */; };
 		52D78CD9133DC8460044F52C /* Postgres.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D78CD7133DC8460044F52C /* Postgres.xib */; };
+		52D78CE8133DD3490044F52C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D78CE7133DD3490044F52C /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5224089513480B34005E3503 /* started.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = started.png; sourceTree = "<group>"; };
+		5224089613480B34005E3503 /* stopped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopped.png; sourceTree = "<group>"; };
+		522408A01348179B005E3503 /* postgres.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = postgres.tiff; sourceTree = "<group>"; };
+		522408A913482CD4005E3503 /* elephant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = elephant.png; sourceTree = "<group>"; };
+		529E2A29133DDED80040D93C /* postgresql.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postgresql.png; sourceTree = "<group>"; };
+		52C9C60C133DEF2F008DB7F5 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		52D78CBF133DC8460044F52C /* Postgres.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Postgres.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D78CC2133DC8460044F52C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		52D78CC4133DC8460044F52C /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		52D78CC7133DC8460044F52C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		52D78CC8133DC8460044F52C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		52D78CC9133DC8460044F52C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		52D78CCC133DC8460044F52C /* Postgres-Info.plist */ = {isa = PBXFileReference; path = "Postgres-Info.plist"; sourceTree = "<group>"; };
+		52D78CCC133DC8460044F52C /* Postgres-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Postgres-Info.plist"; sourceTree = "<group>"; };
 		52D78CCE133DC8460044F52C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		52D78CD0133DC8460044F52C /* Postgres-Prefix.pch */ = {isa = PBXFileReference; path = "Postgres-Prefix.pch"; sourceTree = "<group>"; };
+		52D78CD0133DC8460044F52C /* Postgres-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Postgres-Prefix.pch"; sourceTree = "<group>"; };
 		52D78CD1133DC8460044F52C /* Postgres.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Postgres.h; sourceTree = "<group>"; };
 		52D78CD3133DC8460044F52C /* Postgres.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Postgres.m; sourceTree = "<group>"; };
 		52D78CD5133DC8460044F52C /* Postgres.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Postgres.tiff; sourceTree = "<group>"; };
 		52D78CD8133DC8460044F52C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Postgres.xib; sourceTree = "<group>"; };
+		52D78CE7133DD3490044F52C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D78CE8133DD3490044F52C /* AppKit.framework in Frameworks */,
 				52D78CC3133DC8460044F52C /* Cocoa.framework in Frameworks */,
 				52D78CC5133DC8460044F52C /* PreferencePanes.framework in Frameworks */,
 			);
@@ -48,6 +63,7 @@
 		52D78CB2133DC8460044F52C = {
 			isa = PBXGroup;
 			children = (
+				52D78CE7133DD3490044F52C /* AppKit.framework */,
 				52D78CCA133DC8460044F52C /* Postgres */,
 				52D78CC1133DC8460044F52C /* Frameworks */,
 				52D78CC0133DC8460044F52C /* Products */,
@@ -88,6 +104,7 @@
 				52D78CD1133DC8460044F52C /* Postgres.h */,
 				52D78CD3133DC8460044F52C /* Postgres.m */,
 				52D78CD5133DC8460044F52C /* Postgres.tiff */,
+				529E2A29133DDED80040D93C /* postgresql.png */,
 				52D78CD7133DC8460044F52C /* Postgres.xib */,
 				52D78CCB133DC8460044F52C /* Supporting Files */,
 			);
@@ -97,6 +114,11 @@
 		52D78CCB133DC8460044F52C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5224089513480B34005E3503 /* started.png */,
+				5224089613480B34005E3503 /* stopped.png */,
+				522408A01348179B005E3503 /* postgres.tiff */,
+				522408A913482CD4005E3503 /* elephant.png */,
+				52C9C60C133DEF2F008DB7F5 /* logo.png */,
 				52D78CCC133DC8460044F52C /* Postgres-Info.plist */,
 				52D78CCD133DC8460044F52C /* InfoPlist.strings */,
 				52D78CD0133DC8460044F52C /* Postgres-Prefix.pch */,
@@ -170,6 +192,12 @@
 				52D78CCF133DC8460044F52C /* InfoPlist.strings in Resources */,
 				52D78CD6133DC8460044F52C /* Postgres.tiff in Resources */,
 				52D78CD9133DC8460044F52C /* Postgres.xib in Resources */,
+				529E2A2A133DDED80040D93C /* postgresql.png in Resources */,
+				52C9C612133DEF2F008DB7F5 /* logo.png in Resources */,
+				5224089713480B34005E3503 /* started.png in Resources */,
+				5224089813480B34005E3503 /* stopped.png in Resources */,
+				522408A11348179B005E3503 /* postgres.tiff in Resources */,
+				522408AA13482CD4005E3503 /* elephant.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +329,7 @@
 				52D78CDE133DC8460044F52C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

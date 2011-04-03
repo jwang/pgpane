@@ -27,7 +27,7 @@
 	<key>NSMainNibFile</key>
 	<string>Postgres</string>
 	<key>NSPrefPaneIconFile</key>
-	<string>Postgres.tiff</string>
+	<string>postgres.tiff</string>
 	<key>NSPrefPaneIconLabel</key>
 	<string>Postgres</string>
 	<key>NSPrincipalClass</key>
