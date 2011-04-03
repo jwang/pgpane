@@ -7,6 +7,10 @@ Features include:
 Start and Stop of the database server
 Enabling and Disabling the auto-start option when your computer boots up.
 
+## Screenshot
+
+![PrefPane screenshot](https://github.com/jwang/pgpane/blob/master/Postgres.png)
+
 ## Requirements
 
 Postgresql database installed and initialized. If you do not already have postgres installed, take a look at [HomeBrew](http://mxcl.github.com/homebrew/) to get it installed.
