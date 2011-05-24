@@ -18,6 +18,7 @@
 #define PLIST @"~/Library/LaunchAgents/org.postgresql.postgres.plist"
 #define COPY @"/bin/cp"
 #define MKDIR @"/bin/mkdir"
+#define HOMEBREW_PATH @"/usr/local/bin/pg_ctl"
 
 @implementation Postgres
 @synthesize path = _path;
@@ -148,11 +149,13 @@
     // Find the pg_ctl
     args = [NSArray arrayWithObjects: PG_CTL, nil];
     self.pgctl = [self runCLICommand:WHICH arguments:args];    
-    
+
     // Don't proceed. Disable everything.
     if ([self.pgctl length] == 0) {
-        [self.startButton setEnabled:NO];
-        [self.autoStartCheckBox setEnabled:NO];
+        self.pgctl = HOMEBREW_PATH;
+        //[self.startButton setEnabled:NO];
+        //[self.autoStartCheckBox setEnabled:NO];
+        [self checkServerStatus];
     }
     else {
         [self checkServerStatus];        
