@@ -14,8 +14,6 @@
 #define FIND @"/usr/bin/find"
 #define PG_CTL @"pg_ctl"
 #define USR_LOCAL @"/usr/local"
-#define LAUNCH_AGENTS @"~/Library/LaunchAgents/"
-#define PLIST @"~/Library/LaunchAgents/org.postgresql.postgres.plist"
 #define COPY @"/bin/cp"
 #define MKDIR @"/bin/mkdir"
 #define HOMEBREW_PATH @"/usr/local/bin/pg_ctl"
@@ -59,6 +57,7 @@
     }
     [started release];
     [stopped release];
+    [self.progressIndicator stopAnimation:self];
 }
 
 - (NSString *)runCLICommand:(NSString *)command arguments:(NSArray *)args waitUntilExit:(BOOL)wait {
@@ -175,6 +174,8 @@
 }
 
 - (IBAction)startStopServer:(id)sender {
+    
+    [self.progressIndicator startAnimation:self];
 
     // pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
     // pg_ctl -D /usr/local/var/postgres stop -s -m fast
@@ -198,29 +199,40 @@
 - (IBAction)autoStartChanged:(id)sender {
     NSString *result = nil;
     NSArray *args = nil;
+    
+    [self.progressIndicator startAnimation:self];
+    
+    NSString *launch_agents = [@"~/Library/LaunchAgents/" stringByExpandingTildeInPath];
+    NSString *plist = [@"~/Library/LaunchAgents/org.postgresql.postgres.plist" stringByExpandingTildeInPath];
+    
     if ([self.autoStartCheckBox state] == 0) {        
         // launchctl unload -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
-        args = [NSArray arrayWithObjects:@"unload", @"-w", PLIST, nil];
+        args = [NSArray arrayWithObjects:@"unload", @"-w", plist, nil];
         result = [self runCLICommand:LAUNCHCTL arguments:args];
         
     } else {        
         // mkdir -p ~/Library/LaunchAgents
-        args = [NSArray arrayWithObjects:@"-p", LAUNCH_AGENTS, nil];
+        args = [NSArray arrayWithObjects:@"-p", launch_agents, nil];
         result = [self runCLICommand:MKDIR arguments:args waitUntilExit:YES];
         
         // find the postgres.plist in the /usr/local
         args = [NSArray arrayWithObjects:USR_LOCAL,@"-type", @"f", @"-name", @"org.postgresql.postgres.plist", nil];
         result = [self runCLICommand:FIND arguments:args waitUntilExit:YES];
-        
-        // cp /usr/local/Cellar/postgresql/9.0.3/org.postgresql.postgres.plist ~/Library/LaunchAgents/
-        args = [NSArray arrayWithObjects:result, LAUNCH_AGENTS, nil];
-        result = [self runCLICommand:COPY arguments:args waitUntilExit:YES];
+        NSArray *lines = [result componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        if ([lines count] > 0) {
+            result = [lines objectAtIndex:0];
+
+            // cp /usr/local/Cellar/postgresql/9.0.3/org.postgresql.postgres.plist ~/Library/LaunchAgents/
+            args = [NSArray arrayWithObjects:result, launch_agents, nil];
+            result = [self runCLICommand:COPY arguments:args waitUntilExit:YES];
+        }
         
         // launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
-        args = [NSArray arrayWithObjects:@"load", @"-w", PLIST, nil];
+        args = [NSArray arrayWithObjects:@"load", @"-w", plist, nil];
         result = [self runCLICommand:LAUNCHCTL arguments:args];
     }
-    
+    // update the chrome after done
+    [self performSelector:@selector(checkServerStatus) withObject:nil afterDelay:3.0];
 }
 
 - (void)dealloc {
