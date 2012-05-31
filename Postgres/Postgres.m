@@ -114,7 +114,7 @@
     
     // Set the running/stopped label and set the button text to correct
     // Check if Auto-start is enabled and set checkbox accordingly
-    args = [NSArray arrayWithObjects:@"list",@"org.postgresql.postgres", nil];
+    args = [NSArray arrayWithObjects:@"list",@"homebrew.mxcl.postgresql", nil];
     NSString *autoS = [self runCLICommand:LAUNCHCTL arguments:args waitUntilExit:NO];
     
     if ([autoS length] == 0 || [autoS isEqualToString:@"launchctl list returned unknown response"]) {
@@ -203,7 +203,7 @@
     [self.progressIndicator startAnimation:self];
     
     NSString *launch_agents = [@"~/Library/LaunchAgents/" stringByExpandingTildeInPath];
-    NSString *plist = [@"~/Library/LaunchAgents/org.postgresql.postgres.plist" stringByExpandingTildeInPath];
+    NSString *plist = [@"~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist" stringByExpandingTildeInPath];
     
     if ([self.autoStartCheckBox state] == 0) {        
         // launchctl unload -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
@@ -216,7 +216,7 @@
         result = [self runCLICommand:MKDIR arguments:args waitUntilExit:YES];
         
         // find the postgres.plist in the /usr/local
-        args = [NSArray arrayWithObjects:USR_LOCAL,@"-type", @"f", @"-name", @"org.postgresql.postgres.plist", nil];
+        args = [NSArray arrayWithObjects:USR_LOCAL,@"-type", @"f", @"-name", @"homebrew.mxcl.postgresql.plist", nil];
         result = [self runCLICommand:FIND arguments:args waitUntilExit:YES];
         NSArray *lines = [result componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
         if ([lines count] > 0) {
