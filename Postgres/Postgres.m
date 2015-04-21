@@ -55,8 +55,6 @@
         [self.startedSubtext setHidden:YES];
         [self.statusImage setImage:stopped];
     }
-    [started release];
-    [stopped release];
     [self.progressIndicator stopAnimation:self];
 }
 
@@ -88,7 +86,6 @@
     NSString *string;
     string = [[NSString alloc] initWithData: data
                                    encoding: NSUTF8StringEncoding];
-    [task release];
     return string;    
 }
 
@@ -235,12 +232,5 @@
     [self performSelector:@selector(checkServerStatus) withObject:nil afterDelay:3.0];
 }
 
-- (void)dealloc {
-    [_pgctl release];
-    [_serverLog release];
-    [_postgres release];
-    [_path release];
-    [super dealloc];
-}
 
 @end

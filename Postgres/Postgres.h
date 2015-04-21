@@ -12,32 +12,32 @@
 @interface Postgres : NSPreferencePane {
 @private
     NSString *_path;
-    NSButton *_startButton;
-    NSTextField *_statusLabel;
-    NSButton *_autoStartCheckBox;
-    NSTextField *_detailInformationText;
-    NSProgressIndicator *_progressIndicator;
+    NSButton *__strong _startButton;
+    NSTextField *__strong _statusLabel;
+    NSButton *__strong _autoStartCheckBox;
+    NSTextField *__strong _detailInformationText;
+    NSProgressIndicator *__strong _progressIndicator;
     
     NSString *_serverLog;
     NSString *_postgres;
     NSString *_pgctl;
-    NSTextField *_startedSubtext;
-    NSImageView *_statusImage;
+    NSTextField *__strong _startedSubtext;
+    NSImageView *__strong _statusImage;
     
     BOOL _isRunning;
     
 }
-@property(nonatomic, retain) NSString *path;
-@property (assign) IBOutlet NSButton *startButton;
-@property (assign) IBOutlet NSTextField *statusLabel;
-@property (assign) IBOutlet NSButton *autoStartCheckBox;
-@property (assign) IBOutlet NSTextField *detailInformationText;
-@property (assign) IBOutlet NSProgressIndicator *progressIndicator;
-@property (nonatomic, retain) NSString *serverLog;
-@property (nonatomic, retain) NSString *postgres;
-@property (nonatomic, retain) NSString *pgctl;
-@property (assign) IBOutlet NSTextField *startedSubtext;
-@property (assign) IBOutlet NSImageView *statusImage;
+@property(nonatomic, strong) NSString *path;
+@property (strong) IBOutlet NSButton *startButton;
+@property (strong) IBOutlet NSTextField *statusLabel;
+@property (strong) IBOutlet NSButton *autoStartCheckBox;
+@property (strong) IBOutlet NSTextField *detailInformationText;
+@property (strong) IBOutlet NSProgressIndicator *progressIndicator;
+@property (nonatomic, strong) NSString *serverLog;
+@property (nonatomic, strong) NSString *postgres;
+@property (nonatomic, strong) NSString *pgctl;
+@property (strong) IBOutlet NSTextField *startedSubtext;
+@property (strong) IBOutlet NSImageView *statusImage;
 
 - (void)mainViewDidLoad;
 - (IBAction)startStopServer:(id)sender;
